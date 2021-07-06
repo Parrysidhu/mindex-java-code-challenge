@@ -24,7 +24,7 @@ public class ReportingStructureServiceImpl implements ReportingStructureService{
 	/**
 	 * Method to generate Reporting Structure after calculating the number of reports for the employee with ID : id
 	 * @param id of employee
-	 * @exception RuntimeException on getting a null employee id
+	 * @exception RuntimeException on getting a null Employee object for employee id
 	 */
 	@Override
 	public ReportingStructure returnReportingStructure(String id) {
