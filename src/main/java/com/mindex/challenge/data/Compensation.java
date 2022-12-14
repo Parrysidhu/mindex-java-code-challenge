@@ -1,15 +1,21 @@
 package com.mindex.challenge.data;
 
 import java.time.LocalDate;
-import org.springframework.data.annotation.Id;
 
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Compensation {
-	
-	@Id
+
+	@DBRef(lazy=true)
 	private Employee employee;
 	private Double salary;
 	private LocalDate effectiveDate;
-	
+
+	public Compensation() {
+	}
+
 	public Compensation(Employee employee, Double salary, LocalDate effectiveDate) {
 		this.employee = employee;
 		this.salary = salary;
